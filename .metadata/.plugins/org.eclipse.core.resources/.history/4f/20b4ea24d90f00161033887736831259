@@ -1,0 +1,35 @@
+package com.example.hive.udaf;
+
+import org.apache.hadoop.hive.ql.exec.UDAF;
+import org.apache.hadoop.hive.ql.exec.UDAFEvaluator;
+
+public class SumOfcomission  extends UDAF{
+
+	public static class SumUDAFEvaluator implements UDAFEvaluator {
+		private IntWritable result;
+		public void init() {
+		result = null;
+		}
+		User-Defined Functions | 513
+		public boolean iterate(IntWritable value) {
+		if (value == null) {
+		return true;
+		}
+		if (result == null) {
+		result = new IntWritable(value.get());
+		} else {
+		result.set(Math.max(result.get(), value.get()));
+		}
+		return true;
+		}
+		public IntWritable terminatePartial() {
+		return result;
+		}
+		public boolean merge(IntWritable other) {
+		return iterate(other);
+		}
+		public IntWritable terminate() {
+		return result;
+		}
+		}
+}

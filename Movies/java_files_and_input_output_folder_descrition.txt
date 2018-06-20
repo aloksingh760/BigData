@@ -1,0 +1,203 @@
+/*******************************Question 1 description*********************************************************/
+
+java class:
+/WordCount/src/org/apache/hadoop/examples/WordCount.java
+
+input folder:
+/WordCount/input
+
+output  folder:
+/WordCount/outputwordcount
+
+/*******************************Question 2 description*********************************************************/
+
+Ans:	Map function called: 4 times
+	Reduce function called: 6 times 
+
+java class:
+/WordCount/src/org/apache/hadoop/examples/WordCount.java
+
+input folder:
+/WordCount/input
+
+output  folder:
+/WordCount/outputwordcount
+
+
+
+/*******************************Question 3 description*********************************************************/
+
+Ans:	Map function called: 4 times
+	Reduce function called: 14 times(When combiner used)
+
+java class:
+/WordCount/src/org/apache/hadoop/examples/WordCount.java
+
+input folder:
+/WordCount/input
+
+output  folder:
+/WordCount/outputwordcount
+
+
+/*******************************Question 5 description*********************************************************/
+
+ 
+
+java class:
+/WordCount/src/org/apache/hadoop/examples/WordWithFileIndex.java
+
+input folder:
+/WordCount/input
+
+output  folder:
+/WordCount/Question5output
+
+
+
+/*******************************Question 6 description*********************************************************/
+
+ 
+
+java class:
+/WordCount/src/org/apache/hadoop/examples/WordCountWithFileIndex.java
+
+input folder:
+/WordCount/input
+
+output  folder:
+/WordCount/Question6output
+
+
+
+/*******************************Question 7 description*********************************************************/
+
+After setting the reducer task numbers 4 
+
+java class:
+/WordCount/src/org/apache/hadoop/examples/WordCountWithFileIndex.java
+
+input folder:
+/WordCount/input
+
+output  folder:
+/WordCount/Question7_output
+
+/*******************************Question 8 description*********************************************************/
+
+After setting the reducer task numbers 4 
+
+java class:
+/WordCount/src/org/apache/hadoop/examples/Problem8l.java
+
+input folder:
+/WordCount/input
+
+output  folder:
+/WordCount/problem8_output
+/*******************************Question 9 description*********************************************************/
+
+9-a)
+
+Driver class:
+/StudentRecords/src/average/StudentAverage.java
+
+Mapper combiner and reducer classes:
+/StudentRecords/src/average/StudentAverageMapper.java
+/StudentRecords/src/average/StudentAverageCombiner.java
+/StudentRecords/src/average/StudentAverageReducer.java
+
+input folder:
+/StudentRecords/input1
+
+output folder:
+/StudentRecords/output_9a
+
+
+9-b)
+
+Driver class:
+/StudentRecords/src/highestscoreAcrossAllSchool/StudentAverage.java
+
+Mapper combiner and reducer classes:
+/StudentRecords/src/highestscoreAcrossAllSchool/StudentAverageMapper.java
+/StudentRecords/src/highestscoreAcrossAllSchool/StudentAverageCombiner.java
+/StudentRecords/src/highestscoreAcrossAllSchool/StudentAverageReducer.java
+
+input folder:
+/StudentRecords/input1
+
+output folder:
+/StudentRecords/HighestMarksAccrossEachClass
+
+
+9-c)
+
+Driver class:
+/StudentRecords/src/sortStudentByTotalMarks/StudentAverage.java
+
+Mapper combiner and reducer classes:
+/StudentRecords/src/sortStudentByTotalMarks/StudentAverageMapper.java
+/StudentRecords/src/sortStudentByTotalMarks/StudentAverageCombiner.java
+/StudentRecords/src/sortStudentByTotalMarks/StudentAverageReducer.java
+
+input folder:
+/StudentRecords/input1
+
+output folder:
+/StudentRecords/studentRecord-9c
+
+
+
+/*******************************Qusetion 10 description*************************************************/
+
+
+10-a)
+Driver class:
+/Movies/src/olderMovie/MoviesDriver.java
+
+Mapper and reducer classes:
+/Movies/src/olderMovie/MovieMapper.java
+/Movies/src/olderMovie/MoviesCombiner.java
+/Movies/src/olderMovie/MoviesReducer.java
+
+input folder:
+/Movies/Input_movies
+
+output folder:
+/Movies/output_movies
+
+
+10-b)
+Driver class:
+/Movies/src/moviesrating/NonRatingMovieDriver.java
+
+Mapper and reducer classes:
+/Movies/src/olderMovie/MovieRatingMapper.java
+/Movies/src/olderMovie/MovieRecordMapper.java
+/Movies/src/olderMovie/NonRatingMovieReducer.java
+
+input folder:
+/Movies/Input_movies
+/Movies/Input_rating
+
+output folder:
+/Movies/output_nonrating
+
+10-c)
+Driver class:
+/Movies/src/moviesrating/MovieUpdatedRecordDriver.java
+
+Mapper and reducer classes:
+/Movies/src/olderMovie/MovieRatingMapper.java
+/Movies/src/olderMovie/MovieRecordMapper.java
+/Movies/src/olderMovie/MovieUpdatedReducer.java
+
+input folder:
+/Movies/Input_movies
+/Movies/Input_rating
+
+output folder:
+/Movies/movie_updated_record
+
+

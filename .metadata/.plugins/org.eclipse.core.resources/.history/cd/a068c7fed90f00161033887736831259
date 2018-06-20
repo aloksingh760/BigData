@@ -1,0 +1,38 @@
+package com.example.hive.udaf;
+
+import org.apache.hadoop.hive.ql.exec.UDAF;
+import org.apache.hadoop.hive.ql.exec.UDAFEvaluator;
+import org.apache.hadoop.io.FloatWritable;
+
+public class SumOfcomission  extends UDAF{
+
+	public static class SumUDAFEvaluator implements UDAFEvaluator {
+		private FloatWritable result;
+		public void init() {
+		result = null;
+		}
+		
+		public boolean iterate(FloatWritable value) {
+		if (value == null) {
+		return true;
+		}
+		if (result == null) {
+		result = new FloatWritable(value.get());
+		} else {
+			float sum+=(float)value.get();
+			result=new FloatWritable(sum);
+		
+		}
+		return true;
+		}
+		public IntWritable terminatePartial() {
+		return result;
+		}
+		public boolean merge(IntWritable other) {
+		return iterate(other);
+		}
+		public IntWritable terminate() {
+		return result;
+		}
+		}
+}

@@ -1,0 +1,23 @@
+package com.alok.wiki.index;
+
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Reducer;
+
+import java.io.IOException;
+
+
+public class WikiLinksReducer extends Reducer<Text, Text, Text, Text> {
+
+	String pages ="";
+    @Override
+    public void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
+        //String pagerank = "1.0\t";
+    	
+        for (Text value : values) {
+        	pages=value.toString()+",";
+        	System.out.println(key+" -> "+pages);
+        }
+
+        context.write(key, new Text(pages));
+    }
+}
